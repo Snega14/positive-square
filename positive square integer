@@ -1,0 +1,18 @@
+Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] array = new int[n];
+    
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
+        }
+        
+        
+        int sumOfPositiveSquares = 0;
+        for (int i = 0; i < n; i++) {
+            int sqrt = (int) Math.sqrt(array[i]);
+            if (sqrt * sqrt == array[i] && array[i] > 0) {
+                sumOfPositiveSquares += array[i];
+            }
+        }
+        
+        System.out.println(sumOfPositiveSquares)
